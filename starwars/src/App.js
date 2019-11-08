@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import './App.css';
-import Card from './components/PeopleCard/Card'
+import CardWrapper from './components/PeopleCard/CardWrapper'
 
 const luke = [{
     birth_year: "19BBY",
@@ -59,7 +59,7 @@ const App = () => {
     return (
         <div className="App">
             <h1 className="Header">React Wars</h1>
-            <Card data={people}/>
+            <CardWrapper data={people}/>
         </div>
     );
 };
