@@ -14,6 +14,7 @@ const InfoParagraph = styled.p`
 
 export default function Info(props) {
     const [homeworld, setHomeworld] = useState('');
+
     useEffect(()=>{
         axios.get(props.data.homeworld)
             .then(response => {
@@ -21,6 +22,7 @@ export default function Info(props) {
                 setHomeworld(response.data)
             })
     },[]);
+
     return (
         <InfoWrapper>
             <InfoParagraph>Homeworld: {homeworld.name}</InfoParagraph>
